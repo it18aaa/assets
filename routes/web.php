@@ -14,7 +14,5 @@
 Route::get('/', function () {    
 
     return view('frontpage');
-
-
     
 });
