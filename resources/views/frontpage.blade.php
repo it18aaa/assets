@@ -1,16 +1,24 @@
 <html>
+    <head>
+        <title>Assets</title>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>SCS Login</h1>
 
-<head>
-    <title>This is a test page</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        {{ Form::open(['method'=> 'Post', 'url' => route('login') ]) }}
+
+        {{ Form::label('email', 'e-mail address') }}
+        {{ Form::text('email', null, ['required']) }}
 
 
-</head>
-<body>
-    <h1>TEST PAGE!</h1>
-    This is a test page :-)
-    <br />
-    There is nothing to see here yet. You may go about your business.  Move along...
-</body>
+
+        {{ Form::label('password', 'Password') }}
+        {{ Form::password('password', ['required']) }}
+
+        {{ Form::submit('submit', null )}}
+        {{ Form::close() }}
+        
+    </body>
 </html>
