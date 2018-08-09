@@ -15,8 +15,10 @@ Route::get('/', function () {
 
     return view('frontpage');
     
-});
+})->name('frontpage');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/login', 'Auth\LoginController@login')
+    ->middleware('guest')
+        ->name('login');

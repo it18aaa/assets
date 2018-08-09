@@ -16,8 +16,8 @@ class RequireRole
      */
     public function handle($request, Closure $next, $role)
     {
-        abort_unless(
-            auth()->check() && auth()->user()->hasRole($role), 403);
+        abort_unless(auth()->check() 
+            && auth()->user()->hasRole($role), 403 );
 
         return $next($request);
     }

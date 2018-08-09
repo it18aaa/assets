@@ -5,20 +5,32 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h1>SCS Login</h1>
+        <h1>SCSIT</h1>
 
-        {{ Form::open(['method'=> 'Post', 'url' => route('login') ]) }}
+        @isset( Auth::user()->name )
+          User name: 
+          {{ Auth::user()->name }}
+        @endisset
 
-        {{ Form::label('email', 'e-mail address') }}
-        {{ Form::text('email', null, ['required']) }}
+        <br />
+
+        @isset( Auth::user()->name )
+            Role: {{  Auth::user()->roles->first()->name }}
+        @endisset
 
 
-
-        {{ Form::label('password', 'Password') }}
-        {{ Form::password('password', ['required']) }}
-
-        {{ Form::submit('submit', null )}}
-        {{ Form::close() }}
+        @guest
+            {{ Form::open(['method'=> 'Post', 'url' => route('login') ]) }}
+            {{ Form::label('email', 'e-mail address') }}
+            {{ Form::text('email', null, ['required']) }}
+            <br />
+            {{ Form::label('password', 'Password') }}
+            {{ Form::password('password', ['required']) }}
+            <br /><br />
+            {{ Form::submit('submit', null )}}
+            
+            {{ Form::close() }}
+        @endguest
         
     </body>
 </html>

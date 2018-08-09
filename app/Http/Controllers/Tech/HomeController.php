@@ -11,9 +11,9 @@ class HomeController extends Controller
 
     public function index() {
 
-        return('Admin/dash.php');
+        echo "tech index";
     }
 
 
-    
+
 }
