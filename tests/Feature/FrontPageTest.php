@@ -8,15 +8,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class FrontPageTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
 
     public function testTheWebRootDirStatusCode()
     {
@@ -26,8 +17,10 @@ class FrontPageTest extends TestCase
 
     public function testWebRootText()
     {
+        // this is definately the homepage because it has
+        // SCS written on it somewhere :-)
         $response = $this->get('/');
-        $response->assertSeeText('SCS Login');
-    }
-
+        $response->assertSeeText('SCS');
+    }   
+    
 }

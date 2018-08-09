@@ -1,1 +1,1 @@
-C:30:"PHPUnit\Runner\TestResultCache":174:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:4:{s:13:"testBasicTest";d:0.027;s:11:"testExample";d:0.026;s:27:"testTheWebRootDirStatusCode";d:0.032;s:15:"testWebRootText";d:0.032;}}}
+C:30:"PHPUnit\Runner\TestResultCache":174:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:4:{s:11:"testExample";d:0.415;s:13:"testBasicTest";d:0.029;s:27:"testTheWebRootDirStatusCode";d:0.033;s:15:"testWebRootText";d:0.035;}}}
