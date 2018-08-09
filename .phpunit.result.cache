@@ -1,1 +1,1 @@
-C:30:"PHPUnit\Runner\TestResultCache":174:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:4:{s:11:"testExample";d:0.415;s:13:"testBasicTest";d:0.029;s:27:"testTheWebRootDirStatusCode";d:0.033;s:15:"testWebRootText";d:0.035;}}}
+C:30:"PHPUnit\Runner\TestResultCache":208:{a:2:{s:7:"defects";a:1:{s:14:"testAdminLogin";i:3;}s:5:"times";a:4:{s:21:"testSeeSCSonFrontPage";d:2.233;s:24:"testUnauthenticaedAccess";d:0.799;s:14:"testAdminLogin";d:1.32;s:16:"testBasicExample";d:0.731;}}}
