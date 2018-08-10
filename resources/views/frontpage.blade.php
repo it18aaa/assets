@@ -8,14 +8,16 @@
         <h1>SCSIT</h1>
 
         @isset( Auth::user()->name )
-          User name: 
-          {{ Auth::user()->name }}
-        @endisset
-
-        <br />
-
-        @isset( Auth::user()->name )
-            Role: {{  Auth::user()->roles->first()->name }}
+            User name: 
+            {{ Auth::user()->name }}
+            <br />
+            Roles: 
+            @foreach(Auth::user()->roles as $role )
+                {{ $role->name }}
+            @endforeach
+            {{ Form::open(['method'=> 'Post', 'url' => route('logout') ]) }}
+            {{ Form::submit('Log out', ['name' => 'logout']) }}
+            {{ Form::close() }}
         @endisset
 
 
@@ -24,10 +26,12 @@
             {{ Form::label('email', 'e-mail address') }}
             {{ Form::text('email', null, ['required']) }}
             <br />
+
             {{ Form::label('password', 'Password') }}
             {{ Form::password('password', ['required']) }}
+
             <br /><br />
-            {{ Form::submit('submit', null )}}
+            {{ Form::submit('Login', ['name' => 'login']) }}
             
             {{ Form::close() }}
         @endguest

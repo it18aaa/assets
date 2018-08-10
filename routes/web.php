@@ -17,8 +17,9 @@ Route::get('/', function () {
     
 })->name('frontpage');
 
+// login and logout
 
-
+Route::post('/logout', 'Auth\LoginController@logout')
+    ->name('logout');
 Route::post('/login', 'Auth\LoginController@login')
-    ->middleware('guest')
-        ->name('login');
+    ->middleware('guest')->name('login');
